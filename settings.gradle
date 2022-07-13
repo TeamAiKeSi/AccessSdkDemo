@@ -10,6 +10,14 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url 'https://teamaikesi.jfrog.io/artifactory/android-apps'
+            credentials {//todo add your credentials
+                username = "xxx"
+                password = "xxx"
+            }
+
+        }
     }
 }
 rootProject.name = "Android-AccessSdkDemo"
