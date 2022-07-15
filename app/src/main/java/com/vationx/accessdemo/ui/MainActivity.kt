@@ -77,6 +77,8 @@ class MainActivity : AppCompatActivity() {
                         "sign out failed, error code:$code message: $message",
                         Toast.LENGTH_SHORT
                     ).show()
+                    startActivity(Intent(this@MainActivity, EntryActivity::class.java))
+                    finish()
                 }
 
                 override fun onSuccess(result: Unit) {
