@@ -12,7 +12,7 @@ Access SDK被存储在一个私有的Maven仓库中，您需要有一个账户�
 
 Before implementing SDK integration, you will need to have  **Dependency credential** to be able to use our service, please contact us and apply if you don't have this.
 
-### 1: 引入依赖/Download Dependency
+### 引入依赖/Download Dependency
 
 在工程级别的gradle文件中，加入代码片段
 
