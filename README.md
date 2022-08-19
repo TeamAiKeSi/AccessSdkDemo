@@ -181,6 +181,13 @@ Get User's information
 AccessSdk.UserModule.requestUser(sdkCallback: SDKCallback<User>) 
 ```  
 
+查看是否登录
+
+Check User Login Status
+```  
+AccessSdk.UserModule.isAuth() 
+```  
+
 如果需要额外的SDK使用只能，请联系我们
 
 For other questions or integration help, please contact us and we are happy to help.
