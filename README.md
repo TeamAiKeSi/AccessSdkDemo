@@ -98,6 +98,7 @@ At this point an verification code should be sent to the user's email or phone, 
 ```  
 
 用户登录
+
 User Sign In
 
 ```
@@ -111,7 +112,7 @@ Access SDK也支持信任第三方登录，如果您与VationX服务完成了后
 Sdk supports trusted third party sign in, you can also sign in with auth token received from vationx
 backend.
 
-用户登录
+Auth Token登录
 
 Auth Token Sign In
 
