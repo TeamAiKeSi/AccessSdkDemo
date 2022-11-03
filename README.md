@@ -28,7 +28,7 @@ Go to project level gradle file and add
           jcenter()   
           maven {                 
           url 'https://teamaikesi.jfrog.io/artifactory/android-apps'    
-          credentials { username = 'USERNAME' password = 'PASSWORD' }   
+          credentials { username = 'YOUR USERNAME' password = 'YOUR PASSWORD' }   
        }  
  } 
 ```

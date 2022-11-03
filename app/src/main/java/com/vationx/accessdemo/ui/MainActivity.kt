@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +15,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.vationx.access.sdk.AccessSDK
 import com.vationx.access.sdk.core.CommandResult
-import com.vationx.access.sdk.model.presence.PresenceAccessStatus
+import com.vationx.access.sdk.model.presence.AccessStatus
 import com.vationx.access.sdk.model.presence.ProvisionedState
 import com.vationx.access.sdk.sdkinterfaces.SDKCallback
 import com.vationx.access.sdk.sdkinterfaces.ServiceError
@@ -217,7 +216,7 @@ class MainActivity : AppCompatActivity() {
                                 "PermissionNotSufficient"
                             is ServiceError.SdkNotInitialized -> message = "SdkNotInitialized"
                             is ServiceError.UserAuthenticatedTimedOut -> message =
-                                "UserAuthenticatedTimedOut"
+                                "UserAuthenticatedTimedOut, Please log in again" // please login again if oauth is expired
                             is ServiceError.UserNotAuthenticated -> message = "UserNotAuthenticated"
                         }
                     }
@@ -293,7 +292,7 @@ class MainActivity : AppCompatActivity() {
         val presenceId: String,
         val name: String,
         val rssi: Int,
-        val accessState: PresenceAccessStatus?,
+        val accessState: AccessStatus?,
         val provisionedState: ProvisionedState?,
         val resolved: Boolean,
         val updatedAt: Long = System.currentTimeMillis()
