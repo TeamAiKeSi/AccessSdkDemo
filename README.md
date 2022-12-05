@@ -32,7 +32,7 @@ Go to project level gradle file and add
 
 In module gradle file, add
 ```
-implementation 'com.teamx:access-sdk:1.0.0'
+implementation 'com.vationx:access-sdk:1.0.0'
 ``` 
 
 ### 初始化SDK/Init the SDK
