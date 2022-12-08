@@ -218,6 +218,9 @@ class MainActivity : AppCompatActivity() {
                             is ServiceError.UserAuthenticatedTimedOut -> message =
                                 "UserAuthenticatedTimedOut, Please log in again" // please login again if oauth is expired
                             is ServiceError.UserNotAuthenticated -> message = "UserNotAuthenticated"
+                            is ServiceError.NeedBluetoothAdapterReset -> message =
+                                "bluetooth is funky, please restart bluetooth adapter"
+                            else -> Unit
                         }
                     }
                     else -> message = "other"
