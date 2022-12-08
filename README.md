@@ -38,7 +38,7 @@ Go to project level gradle file and add
 In module gradle file, add
 
 ```
-implementation 'com.teamx:access-sdk:1.0.0'
+implementation 'com.vationx.access:sdk:1.0.1'
 ``` 
 
 ### 初始化SDK/Init the SDK
@@ -169,6 +169,7 @@ sealed class ServiceError {
     object UserNotAuthenticated : ServiceError()      
     object BlueToothAdapterNotSupported : ServiceError()      
     object AdvertiserError : ServiceError() 
+    object NeedBluetoothAdapterReset : ServiceError() //when bluetooth is funky and need restart adapter
 } 
 ```
 
