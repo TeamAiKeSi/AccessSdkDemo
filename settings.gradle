@@ -13,8 +13,8 @@ dependencyResolutionManagement {
         maven {
             url 'https://teamaikesi.jfrog.io/artifactory/android-apps'
             credentials {//todo add your credentials
-                username = "xxxx"
-                password = "xxxxx"
+                username = "YOUR USERNAME"
+                password = "YOUR PASSWORD"
             }
 
         }
