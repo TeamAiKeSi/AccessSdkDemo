@@ -3,13 +3,16 @@ package com.vationx.accessdemo
 import android.app.Application
 import com.vationx.access.sdk.AccessSDK
 import com.vationx.access.sdk.core.CommandResult
+import com.vationx.access.sdk.core.ota.OtaEvent
 import com.vationx.access.sdk.model.config.Config
 import com.vationx.access.sdk.model.config.SdkEnv
 import com.vationx.access.sdk.model.config.ServiceNotificationInfo
+import com.vationx.access.sdk.model.health.ExternalReaderStatus
 import com.vationx.access.sdk.model.presence.ExternalPresence
 import com.vationx.access.sdk.model.presence.UnResolvedPresence
 import com.vationx.access.sdk.sdkinterfaces.ServiceListener
 import com.vationx.access.sdk.sdkinterfaces.ServiceStatusEvent
+import com.vationx.access.sdk.sdkinterfaces.WifiConnectProgressStatus
 import com.vationx.accessdemo.data.DataSource
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
@@ -51,6 +54,12 @@ class MyApplication : Application() {
                 DataSource.onUnresolvedPresence(unResolvedPresence)
             }
 
+            override fun onWifiConnectProgress(
+                presenceId: String,
+                wifiConnectProgressStatus: WifiConnectProgressStatus
+            ) {
+            }
+
             override fun onPresence(presence: ExternalPresence) {
                 //nearby devices that user have access
                 DataSource.onPresence(presence)
@@ -59,6 +68,12 @@ class MyApplication : Application() {
             override fun onCommandResult(result: CommandResult) {
                 //when there is an action taken, for example, manual unlock the reader. the result would be notified here
                 DataSource.onCommandResult(result)
+            }
+
+            override fun onHealthResult(externalReaderStatus: ExternalReaderStatus) {
+            }
+
+            override fun onOtaProgress(presenceId: String, otaEvent: OtaEvent) {
             }
         })
     }
