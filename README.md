@@ -38,7 +38,7 @@ Go to project level gradle file and add
 In module gradle file, add
 
 ```
-implementation 'com.vationx.access:sdk:1.0.1'
+implementation 'com.vationx.access:sdk:1.0.3'
 ``` 
 
 ### 初始化SDK/Init the SDK
@@ -76,6 +76,8 @@ val config = Config.Builder()
 .setAppKey("your app key") // Please contact vationx for app key
 .setServiceNotificationInfo(notificationInfo) 
 .setDisableAutoUnlock(false) // not mendantory, default is false, is you want to disabletap-in mode, set this to true 
+.setCustomHost("Your private host")
+.setFetchPermissionTimeInterval(refresh permission time interval in seconds)
 .build()   
 
 AccessSdk.initAccessSdk(config) 
@@ -148,6 +150,8 @@ AccessSDK.addServiceListener(object :ServiceListener{
    //每一次发送一个command，您将会拿到一个commandID，这里会返回command结果（可以用result中的id进行command匹配）  
    //once you send a command to a nearby device, you will get an command id, in this callback you can check the command result based on the mapping of command id    
    } 
+   
+   ...
 }) 
 ```  
 

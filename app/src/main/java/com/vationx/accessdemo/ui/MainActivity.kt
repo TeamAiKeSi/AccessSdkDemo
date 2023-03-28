@@ -17,12 +17,12 @@ import com.vationx.access.sdk.AccessSDK
 import com.vationx.access.sdk.core.CommandResult
 import com.vationx.access.sdk.model.presence.AccessStatus
 import com.vationx.access.sdk.model.presence.ProvisionedState
-import com.vationx.access.sdk.sdkinterfaces.SDKCallback
 import com.vationx.access.sdk.sdkinterfaces.ServiceError
 import com.vationx.access.sdk.sdkinterfaces.ServiceStatusEvent
 import com.vationx.access.sdk.sdkinterfaces.UserCommand
 import com.vationx.accessdemo.R
 import com.vationx.accessdemo.data.DataSource
+import com.vationx.common.SDKCallback
 import kotlinx.coroutines.*
 import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.flow.launchIn
@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         val btStop = findViewById<AppCompatButton>(R.id.bt_stop)
         val btReport = findViewById<AppCompatButton>(R.id.bt_report)
         val btRefresh = findViewById<AppCompatButton>(R.id.bt_refresh)
+
         val list = findViewById<RecyclerView>(R.id.list)
         adapter = ReaderListAdapter()
         list.adapter = adapter

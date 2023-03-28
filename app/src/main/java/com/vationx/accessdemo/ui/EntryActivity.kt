@@ -7,8 +7,8 @@ import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatEditText
 import com.vationx.access.sdk.AccessSDK
-import com.vationx.access.sdk.sdkinterfaces.SDKCallback
 import com.vationx.accessdemo.R
+import com.vationx.common.SDKCallback
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 
