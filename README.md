@@ -27,7 +27,7 @@ Go to project level gradle file and add
           google()   
           jcenter()   
           maven {                 
-          url 'https://teamaikesi.jfrog.io/artifactory/android-apps'    
+          url 'https://packages.aliyun.com/maven/repository/2398023-release-5LhWnB'    
           credentials { username = 'YOUR USERNAME' password = 'YOUR PASSWORD' }   
        }  
  } 
@@ -38,7 +38,7 @@ Go to project level gradle file and add
 In module gradle file, add
 
 ```
-implementation 'com.vationx.access:sdk:1.0.4'
+implementation 'com.vationx.access:sdk:1.0.6'
 ``` 
 
 ### 初始化SDK/Init the SDK

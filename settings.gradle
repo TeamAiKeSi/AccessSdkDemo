@@ -11,12 +11,11 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven {
-            url 'https://teamaikesi.jfrog.io/artifactory/android-apps'
+            url 'https://packages.aliyun.com/maven/repository/2398023-release-5LhWnB'
             credentials {//todo add your credentials
-                username = "YOUR USERNAME"
-                password = "YOUR PASSWORD"
+                username = "USERNAME"
+                password = "PASSWORD"
             }
-
         }
     }
 }

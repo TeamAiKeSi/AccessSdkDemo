@@ -36,7 +36,7 @@ class MyApplication : Application() {
             .build()
         //set sdk configuration
         val config = Config.Builder()
-            .setAppKey("YOUR APP KEY") //PUT YOUR APP KEY HERE!!
+            .setAppKey("YOUR APP KEY") //todo PUT YOUR APP KEY HERE!!
             .setAppId("com.vationx.accessdemo") // here put your app package name
             .setServiceNotificationInfo(notificationInfo)
             .build()
