@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="You will need to enter email/phone and verification code to login"
+        android:text="You will need to enter email and verification code to login"
         android:textColor="@color/black"
         android:textSize="18sp" />
 

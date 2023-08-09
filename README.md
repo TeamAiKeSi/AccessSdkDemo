@@ -38,7 +38,7 @@ Go to project level gradle file and add
 In module gradle file, add
 
 ```
-implementation 'com.vationx.access:sdk:1.0.6'
+implementation 'com.vationx.access:sdk:1.0.7'
 ``` 
 
 ### 初始化SDK/Init the SDK
@@ -77,6 +77,7 @@ val config = Config.Builder()
 .setServiceNotificationInfo(notificationInfo) 
 .setDisableAutoUnlock(false) // not mendantory, default is false, is you want to disabletap-in mode, set this to true 
 .setCustomHost("Your private host")
+.setScanStrategy(ScanStrategy) // not mendantory, set it to aggressive/conservative
 .setFetchPermissionTimeInterval(refresh permission time interval in seconds)
 .build()   
 
@@ -94,7 +95,9 @@ We use email/phone(Mainland China only) + verification code to auth an user
 Request Auth Code
 
 ```  
-AccessSdk.UserModule.getVerificationCodeForUserName(username: String, sdkCallback: SDKCallback<Unit>) ```  
+AccessSdk.UserModule.getVerificationCodeForEmail(email: String, sdkCallback: SDKCallback<Unit>)
+AccessSdk.UserModule.getVerificationCodeForPhone(countryCode: String, phone: String, sdkCallback: SDKCallback<Unit>)```  
+
 如果成功，验证码将发送到用户的邮箱/手机短信
 At this point an verification code should be sent to the user's email or phone, now login with email + verification code  
 ```  
@@ -104,7 +107,8 @@ At this point an verification code should be sent to the user's email or phone, 
 User Sign In
 
 ```
-AccessSdk.UserModule.signInWithVerificationCode(email: username, code: String, sdkCallback: SDKCallback<Unit>)  
+AccessSdk.UserModule.signInWithVerificationCodeForEmail(email: username, code: String, sdkCallback: SDKCallback<Unit>)  
+AccessSdk.UserModule.signInWithVerificationCodeForPhone(countryCode: String, phone: String, sdkCallback: SDKCallback<Unit>)  
 ```  
 
 ### Third Party Login/三方登录

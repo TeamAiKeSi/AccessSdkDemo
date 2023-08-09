@@ -25,7 +25,7 @@ class EntryActivity : AppCompatActivity() {
         val btSignIn = findViewById<AppCompatButton>(R.id.bt_signin)
 
         btAuth.setOnClickListener {
-            AccessSDK.userModule.getVerificationCodeForUserName(etAccount.text.toString(),
+            AccessSDK.userModule.getVerificationCodeForEmail(etAccount.text.toString(),
                 object : SDKCallback<Unit> {
                     override fun onFailure(code: Int, message: String) {
                         Toast.makeText(
@@ -46,7 +46,7 @@ class EntryActivity : AppCompatActivity() {
                 })
         }
         btSignIn.setOnClickListener {
-            AccessSDK.userModule.signInWithVerificationCode(account, etCode.text.toString(),
+            AccessSDK.userModule.signInWithVerificationCodeForEmail(account, etCode.text.toString(),
                 object : SDKCallback<Unit> {
                     override fun onFailure(code: Int, message: String) {
                         Toast.makeText(
