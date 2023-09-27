@@ -38,7 +38,7 @@ Go to project level gradle file and add
 In module gradle file, add
 
 ```
-implementation 'com.vationx.access:sdk:1.0.7'
+implementation 'com.vationx.access:sdk:1.0.8'
 ``` 
 
 ### 初始化SDK/Init the SDK
